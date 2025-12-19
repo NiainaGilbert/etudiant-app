@@ -37,7 +37,7 @@ class StudentController extends Controller
         Student::create($validated);
 
         return redirect()->route('students.index')
-            ->with('success', __('messages.student_added'));
+            ->with('success', __('Student added successfully'));
     }
 
     public function edit(Student $student)
@@ -59,7 +59,7 @@ class StudentController extends Controller
         $student->update($validated);
 
         return redirect()->route('students.index')
-            ->with('success', __('messages.student_updated'));
+            ->with('success', __('Student updated successfully'));
     }
 
     public function destroy(Student $student)
@@ -67,6 +67,6 @@ class StudentController extends Controller
         $student->delete();
 
         return redirect()->route('students.index')
-            ->with('success', __('messages.student_deleted'));
+            ->with('success', __('Student deleted successfully'));
     }
 }
